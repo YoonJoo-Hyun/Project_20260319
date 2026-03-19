@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', savedTheme);
-    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
 
     const getNumberColor = (number) => {
         if (number <= 10) return '#fbc400'; // Yellow
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        themeToggle.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
     });
 
     generateBtn.addEventListener('click', () => {

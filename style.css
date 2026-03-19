@@ -4,6 +4,7 @@
     --text-color: #333;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --btn-shadow: rgba(255, 75, 43, 0.4);
+    --toggle-btn-bg: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -12,6 +13,7 @@
     --text-color: #f0f2f5;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --btn-shadow: rgba(0, 0, 0, 0.3);
+    --toggle-btn-bg: #3d3d3d;
 }
 
 body {
@@ -41,24 +43,26 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: var(--container-bg);
+    background: var(--toggle-btn-bg);
     border: 2px solid var(--text-color);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1000;
     box-shadow: 0 4px 8px var(--shadow-color);
     transition: all 0.3s ease;
 }
 
 .theme-toggle:hover {
-    transform: rotate(20deg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.theme-toggle:active {
+    transform: translateY(0);
 }
 
 .container:hover {
