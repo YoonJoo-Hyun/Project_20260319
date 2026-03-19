@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const lottoNumbersContainer = document.querySelector('.lotto-numbers');
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
     const getNumberColor = (number) => {
         if (number <= 10) return '#fbc400'; // Yellow
@@ -9,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (number <= 40) return '#aaaaaa'; // Gray
         return '#b0d840'; // Green
     };
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
 
     generateBtn.addEventListener('click', () => {
         lottoNumbersContainer.innerHTML = '';
