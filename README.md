@@ -1,21 +1,24 @@
-# Lotto Number Generator
+# Atlas Finders
 
-A simple, visually appealing Lotto Number Generator with Dark/Light mode support.
+전 세계 여행지를 취향별로 추천해주는 정적 웹사이트입니다.
 
 ## Features
-- Generate 6 unique lotto numbers (1-45).
-- Sorted results with staggered animations.
-- Dynamic color coding for number ranges.
-- Dark mode and Light mode toggle.
-- Persistent theme preference using `localStorage`.
+- 분위기, 예산, 계절, 여행 기간으로 목적지 추천
+- 전 세계 주요 도시와 자연 여행지 큐레이션
+- 상위 3개 추천 카드 자동 표시
+- 다크 모드와 라이트 모드 전환
+- 모바일과 데스크톱에 대응하는 반응형 레이아웃
 
 ## How to Use
-1. Open `index.html` in your browser.
-2. Click "Generate Numbers" to get your lotto numbers.
-3. Use the 🌙/☀️ icon in the top right to toggle between Dark and Light modes.
+1. index.html을 브라우저에서 엽니다.
+2. 분위기, 예산, 계절, 여행 기간을 선택합니다.
+3. 추천 여행지 보기 버튼을 눌러 현재 조건에 맞는 추천 3곳을 확인합니다.
 
 ## Deployment
-This project is ready to be deployed on GitHub Pages.
-- Go to Repository Settings > Pages.
-- Select `main` branch and `/ (root)` folder.
-- Click Save.
+이 프로젝트는 정적 파일만으로 구성되어 있어 GitHub Pages에 바로 배포할 수 있습니다.
+
+1. 저장소를 GitHub에 푸시합니다.
+2. GitHub 저장소의 Settings > Pages로 이동합니다.
+3. Deploy from a branch를 선택합니다.
+4. 배포 브랜치로 main, 폴더로 / (root)를 선택합니다.
+5. 저장 후 생성된 GitHub Pages 주소로 접속합니다.
