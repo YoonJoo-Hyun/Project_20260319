@@ -95,6 +95,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     travelForm.addEventListener('submit', generateRecommendations);
 
+    // Form Toggle Logic
+    const reviewForm = document.getElementById('review-form');
+    const formTypeRadios = document.querySelectorAll('input[name="form_type"]');
+    const labelDestName = document.getElementById('label-dest-name');
+    const inputDestName = document.getElementById('dest-name');
+    const labelReviewText = document.getElementById('label-review-text');
+    const textareaReviewText = document.getElementById('review-text');
+    const submitBtn = document.getElementById('submit-btn');
+
+    const updateFormUI = (type) => {
+        if (type === 'recommend') {
+            labelDestName.textContent = '추천하고 싶은 여행지';
+            inputDestName.placeholder = '파리, 프랑스';
+            labelReviewText.textContent = '추천 이유 및 팁';
+            textareaReviewText.placeholder = '이 여행지만의 매력이나 팁을 공유해주세요.';
+            submitBtn.textContent = '추천서 제출하기';
+        } else {
+            labelDestName.textContent = '리뷰할 여행지 (추천받은 곳)';
+            inputDestName.placeholder = '예: 교토, 일본';
+            labelReviewText.textContent = '다녀오신 후기';
+            textareaReviewText.placeholder = '실제로 가보니 어떠셨나요? 솔직한 후기를 남겨주세요.';
+            submitBtn.textContent = '리뷰 제출하기';
+        }
+    };
+
+    formTypeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            updateFormUI(e.target.value);
+        });
+    });
+
     // Initial Load
     generateRecommendations();
 });

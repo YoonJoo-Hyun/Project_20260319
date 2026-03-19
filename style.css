@@ -335,6 +335,139 @@ select {
     color: var(--text-secondary);
 }
 
+/* Review Section */
+.review-section {
+    margin-top: 100px;
+    padding: 60px;
+    background: var(--bg-secondary);
+    border-radius: 40px;
+    border: 1px solid var(--border);
+}
+
+.review-section .header-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.review-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--surface-solid);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-type-toggle {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    background: var(--bg-primary);
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.toggle-option {
+    flex: 1;
+    cursor: pointer;
+}
+
+.toggle-option input {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.toggle-option input:checked + .toggle-label {
+    background: var(--surface-solid);
+    color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.input-group.full-width {
+    grid-column: span 2;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(212, 106, 67, 0.2);
+    margin-top: 24px;
+}
+
+.submit-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(212, 106, 67, 0.3);
+}
+
 /* Footer */
 .footer {
     margin-top: 100px;
@@ -360,6 +493,15 @@ select {
     }
     .recommendations {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .review-section {
+        padding: 40px 30px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .input-group.full-width {
+        grid-column: span 1;
     }
 }
 

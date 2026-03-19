@@ -102,6 +102,55 @@
             </section>
 
             <section id="recommendations" class="recommendations" aria-live="polite"></section>
+
+            <section class="review-section">
+                <div class="header-text">
+                    <p class="section-kicker">Community Review</p>
+                    <h2>당신의 여행을 들려주세요</h2>
+                    <p class="summary-text">추천하고 싶은 여행지나 다녀오신 곳의 생생한 리뷰를 남겨주세요.</p>
+                </div>
+
+                <div class="form-container">
+                    <form action="https://formspree.io/f/xreyjzze" method="POST" class="review-form" id="review-form">
+                        <div class="form-type-toggle">
+                            <label class="toggle-option">
+                                <input type="radio" name="form_type" value="recommend" checked>
+                                <span class="toggle-label">새로운 여행지 추천하기</span>
+                            </label>
+                            <label class="toggle-option">
+                                <input type="radio" name="form_type" value="review">
+                                <span class="toggle-label">추천받은 여행지 리뷰하기</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="input-group full-width">
+                                <label for="reviewer-email">이메일 주소</label>
+                                <input type="email" id="reviewer-email" name="email" placeholder="example@email.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="dest-name" id="label-dest-name">여행지 이름</label>
+                                <input type="text" id="dest-name" name="destination" placeholder="파리, 프랑스" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="dest-rating">평점 (1-5)</label>
+                                <select id="dest-rating" name="rating">
+                                    <option value="5">★★★★★ (최고)</option>
+                                    <option value="4">★★★★ (좋음)</option>
+                                    <option value="3">★★★ (보통)</option>
+                                    <option value="2">★★ (별로)</option>
+                                    <option value="1">★ (나쁨)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group full-width">
+                            <label for="review-text" id="label-review-text">추천 이유 및 팁</label>
+                            <textarea id="review-text" name="message" rows="5" placeholder="이 여행지만의 매력이나 팁을 공유해주세요." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submit-btn">추천서 제출하기</button>
+                    </form>
+                </div>
+            </section>
         </main>
         
         <footer class="footer">
